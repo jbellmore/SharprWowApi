@@ -1,1 +1,15 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SharprWowApi-jbellmore</id>
+    <version>0.1.1</version>
+    <authors>Jarrod Bellmore</authors>
+    <description>Fork of the SharpWowApi by Github user bpfz. This library is a c# wrapper around the Battlenet WoW api from Blizzard.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/jbellmore/SharprWowApi/</projectUrl>
+    <licenseUrl>https://github.com/jbellmore/SharprWowApi/blob/master/License.md</licenseUrl>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="6.0.8" />
+    </dependencies>
+  </metadata>  
+</package>
