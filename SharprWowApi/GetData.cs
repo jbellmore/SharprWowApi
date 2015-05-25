@@ -6,6 +6,7 @@ using SharprWowApi.Models.Character;
 using SharprWowApi.Models.DataResources;
 using SharprWowApi.Models.Guild;
 using SharprWowApi.Models.Item;
+using SharprWowApi.Models.Profile;
 using SharprWowApi.Models.PVP;
 using SharprWowApi.Models.Quest;
 using SharprWowApi.Models.RealmStatus;
@@ -18,6 +19,22 @@ namespace SharprWowApi
     public abstract class GetData : GetDataBase
     {
         private JsonUtility json = new JsonUtility();
+
+        // Neds testing
+        #region WoW Profile
+        public ProfileRoot GetProfile(string accessToken)
+        {
+            var profile = new ProfileRoot();
+
+            var url =
+                string.Format(@"/wow/user/characters?access_token={0}",
+                _Host,
+                accessToken);
+
+            profile = json.GetDataFromURL<ProfileRoot>(url);
+            return profile;
+        }
+        #endregion
 
         //done
         #region achievement

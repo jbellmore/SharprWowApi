@@ -15,12 +15,29 @@ using SharprWowApi.Models.RealmStatus;
 using SharprWowApi.Models.Recipe;
 using SharprWowApi.Models.Spells;
 using SharprWowApi.Utility;
+using SharprWowApi.Models.Profile;
 
 namespace SharprWowApi
 {
     public abstract class GetDataAsync : GetDataBase
     {
         private JsonUtility jsonUtility = new JsonUtility();
+
+        // Needs testing
+        #region WoW Profile
+        public async Task<ProfileRoot> GetProfile(string accessToken)
+        {
+            var profile = new ProfileRoot();
+
+            var url =
+                string.Format(@"/wow/user/characters?access_token={0}",
+                _Host,
+                accessToken);
+
+            profile = await this.jsonUtility.GetDataFromURLAsync<ProfileRoot>(url);
+            return profile;
+        }
+        #endregion
 
         #region Achievement
         public async Task<AchievementRoot> GetAchievementAsync(int achievementId)
