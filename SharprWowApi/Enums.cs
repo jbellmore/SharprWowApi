@@ -36,7 +36,6 @@ namespace SharprWowApi
         zh_CN
     }
 
-    [Flags]
     public enum CharacterClass
     {
         Warrior = 1,
