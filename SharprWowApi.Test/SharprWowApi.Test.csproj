@@ -55,6 +55,7 @@
     <Compile Include="UnitTestAuction.cs" />
     <Compile Include="UnitTestCharacter.cs" />
     <Compile Include="UnitTestAchievement.cs" />
+    <Compile Include="UnitTestProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharprWowApi\SharprWowApi.csproj">

@@ -27,7 +27,7 @@ namespace SharprWowApi
             var profile = new ProfileRoot();
 
             var url =
-                string.Format(@"/wow/user/characters?access_token={0}",
+                string.Format(@"{0}/wow/user/characters?access_token={1}",
                 _Host,
                 accessToken);
 

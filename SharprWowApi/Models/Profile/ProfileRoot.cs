@@ -9,6 +9,6 @@ namespace SharprWowApi.Models.Profile
 {
     public class ProfileRoot
     {
-        public IEnumerable<CharacterRoot> Characters { get; set; }
+        public IEnumerable<ProfileCharacter> Characters { get; set; }
     }
 }
